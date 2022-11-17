@@ -175,14 +175,14 @@ describe('Sample Testcases', () => {
         /**
          * 1. Launch chrome browser
          * 2. Launch 'https://www.facebook.com'
-         * 3. Verify the page title starts with 'Facebook'
+         * 3. Verify the page title starts with 'faCeBooK'
          */
 
         // 1. Launch chrome browser
         // 2. Launch 'https://www.facebook.com'
         await browser.url('/');
 
-        // 3. Verify the url is 'Facebook - log in or sign up'
+        // 3. Verify the page title starts with 'faCeBooK' (ignoring cases)
         /**
          * To get the page-title on the webpage(web-browser)
          * function: getTitle()
