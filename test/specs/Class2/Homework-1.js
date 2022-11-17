@@ -1,6 +1,8 @@
 /**
  * Automate below testcase:
  * 
+ * Due date: Nov 18 (EOD)
+ * 
  * TC-1:
  * Steps:
  * 1. Launch facebook.com
