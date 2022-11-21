@@ -38,5 +38,12 @@
 
 /**
  * TC-4: https://www.darksky.net/
- * Darksky: Verify feelsLikeTempValue is in between lowTempValue and highTempValue 
+ * Darksky: Verify feelsLikeTempValue is in between lowTempValue and highTempValue
+ * 
+ * 31˚(string) -> 31(string) -> 31(number)
+ * 25˚(string) -> 25(string) -> 25(number)
+ * 39˚(string) -> 39(string) -> 39(number)
+ * 
+ * feelsLikeTempValue <= lowTempValue AND feelsLikeTempValue <= highTempValue
+ * 
  */

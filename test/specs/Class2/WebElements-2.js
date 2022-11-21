@@ -47,6 +47,7 @@
  * 1. Using id-attribute
  *      id-attribute is always going to be unique in the DOM
  *      To check if id-value is unique, In chropath -> //*[@id='idValue']
+ *      NOTE: # represents that value after it is value of id-Attribute
  * 
  *      const webElement = await $('#idValue');
  * 

@@ -55,6 +55,7 @@
  *  9. Using className-attribute
  *      To check if class's attribute value is unique, In chropath -> //*[@class='classAttrValue']
  *      NOTE: class-Attribute's value CANNOT have spaces
+ *      NOTE: . represents that value after it is value of class-Attribute
  * 
  *      const webElement = await $('.classAttrValue');
  * 
