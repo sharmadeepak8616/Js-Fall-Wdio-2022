@@ -68,6 +68,22 @@ class Commands {
     }
 
     /**
+     * Generic function to find if field is enabled
+     * name: isWebElementEnabled
+     * input: string(locator)
+     */
+    async isWebElementEnabled(locator) {
+        /*
+            1. find the webElement
+            2. if found, check if element is enabled
+            3. otherwise, wait for 1-second then start from step-1
+
+            do above flow for 30-seconds
+        */
+        return await $(locator).isEnabled();
+    }
+
+    /**
      * Generic function to get Text of a WebElement
      * name: getTextOfWebElement
      * input: string(locator)
