@@ -134,8 +134,6 @@ describe('Multiple WebElements Tests', () => {
 
     });
 
-    // 8:20pm
-
 
 
 });
