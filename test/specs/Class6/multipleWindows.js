@@ -117,5 +117,17 @@ describe('Multiple Windows Tests', () => {
 
     });
 
+    /**
+     * get all handles (3) [h1, h2, h3]
+     * 
+     * for (const handle of handles) {
+     *      browser.switchToWindow(h2);     // connected browser with h1-handle
+     *      if (browser.getTitle() === "Instagram")
+     *          break;
+     * }
+     * browser is connected to Instagram
+     * 
+     * $('loginInstagram').click();
+     */
 
 });

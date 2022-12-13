@@ -104,4 +104,28 @@ describe('WaitFor Concept', () => {
     });
 
 
+    /**
+     * wait until the locator returns 8 or more webElements
+     * 
+     * waitForDisplayed()   - to wait until the element is displayed on the screen
+     * waitForClickable()   - to wait until the element is clickable
+     * waitForEnabled()     - to wait until the element is enabled
+     * waitForExist()       - to wait until the element exists in the dom
+     * waitUntil()          - to wait until mention condition(s) are true
+     * 
+     * 
+     * 
+     * waitUntil( function () {
+     *      return $$(locator).length >= 8
+     * })
+     * 
+     * 
+     * wait until page title is "Facebook - log in or sign up"
+     * waitUntil( function () {
+     *      return await browser.getTitle() === "Facebook - log in or sign up"
+     * })
+     * 
+     */
+
+
 });

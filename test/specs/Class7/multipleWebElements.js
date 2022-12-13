@@ -1,4 +1,5 @@
 const { expect } = require("chai");
+const moment = require('moment');
 
 describe('Multiple WebElements Tests', () => {
 
@@ -32,7 +33,7 @@ describe('Multiple WebElements Tests', () => {
 
     });
 
-    it('Get all temp values from timeline', async () => {
+    it('Get all time-datapoint values from timeline', async () => {
         
         await browser.url('https://www.darksky.net');
 
@@ -43,7 +44,22 @@ describe('Multiple WebElements Tests', () => {
         for (const tempElement of allTempElements) {
             allTempValues.push(await tempElement.getText());
         }
-        console.log(`\n allTempValues -> ${allTempValues} \n`);
+        console.log(`\n allTempValues -> ${allTempValues} \n`); // [Now 1pm 3pm 5pm 7pm 9pm 11pm 1am 3am 5am 7am 9am]
+
+        /**
+         * Create your own expected array
+         */
+        let expTimeline = ['Now']
+
+        let newTime = moment().add(2, 'hour');
+
+        for (let i = 2; i <= 12; i++) {
+            expTimeline.push(newTime.format('ha'));
+            newTime = newTime.add(2, 'hour');
+        }
+        console.log(`\n expTimeline -> ${expTimeline} \n`);
+
+        expect(allTempValues, 'Timeline is not as expected').to.deep.equal(expTimeline);
 
     });
 
