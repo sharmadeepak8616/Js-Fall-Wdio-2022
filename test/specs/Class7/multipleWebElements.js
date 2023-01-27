@@ -60,6 +60,7 @@ describe('Multiple WebElements Tests', () => {
         console.log(`\n expTimeline -> ${expTimeline} \n`);
 
         expect(allTempValues, 'Timeline is not as expected').to.deep.equal(expTimeline);
+        expect(allTempValues, 'Timeline is not as expected').to.eql(expTimeline);
 
     });
 
